@@ -1,0 +1,152 @@
+[
+    {
+        "id": "001",
+        "images": ["/dist/imgs/assistant.png",""],
+        "answer": "assistant"
+    },
+    {
+        "id": "002",
+        "images": ["/dist/imgs/sociable.png",""],
+        "answer": "sociable"
+    },
+    {
+        "id": "003",
+        "images": ["/dist/imgs/national_park.png",""],
+        "answer": "national park"
+    },
+    {
+        "id": "004",
+        "images": ["/dist/imgs/rely.png",""],
+        "answer": "rely"
+    },
+    {
+        "id": "005",
+        "images": ["/dist/imgs/principal.png",""],
+        "answer": "principal"
+    },
+    {
+        "id": "006",
+        "images": ["/dist/imgs/elegant.webp",""],
+        "answer": "elegant"
+    },
+    {
+        "id": "007",
+        "images": ["/dist/imgs/amongst.png",""],
+        "answer": "amongst"
+    },
+    {
+        "id": "008",
+        "images": ["/dist/imgs/exhausting.jpg",""],
+        "answer": "exhausting"
+    },
+    {
+        "id": "009",
+        "images": ["/dist/imgs/single-story-house.webp",""],
+        "answer": "single-story house"
+    },
+    {
+        "id": "010",
+        "images": ["/dist/imgs/spot.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "011",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "012",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "013",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "014",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "015",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "016",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "017",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "018",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "019",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "020",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "021",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "022",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "023",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "024",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "025",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "026",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "027",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "027",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "027",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    },
+    {
+        "id": "027",
+        "images": ["/dist/imgs/plush.png",""],
+        "answer": "spot"
+    }
+]

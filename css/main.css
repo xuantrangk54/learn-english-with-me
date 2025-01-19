@@ -1,0 +1,83 @@
+/* Tùy chỉnh bố cục lưới */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    /* Khoảng cách giữa các nút */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-team {
+  width: 900;
+  height: 800;
+}
+
+.image-content {
+  height: 500px;
+}
+
+.single_letter_answer {
+  padding: 10px 10px;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  font-size: 24px;
+  background-color: gainsboro;
+  color: red;
+}
+
+/* Tùy chỉnh giao diện nút */
+.custom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #f0f0f0;
+    margin: 5px;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+
+.custom-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+/* Container chứa các vùng */
+.container , .slide {
+    display: flex;
+    color: black;
+    background-color: rgb(158, 221, 21);
+    flex-direction: column; /* Sắp xếp các vùng theo chiều dọc */
+    height: 100vh; /* Chiều cao của container bằng chiều cao của viewport */
+  }
+  
+  /* Vùng 1 */
+  .region-answer, .region-3 {
+    height: 50px; /* Chiều cao cố định */
+    background-color: #f0f0f0; /* Màu nền cho vùng 1 và vùng 3 */
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Vùng 2 (flexible height) */
+  .region-content {
+    flex: 1; /* Chiếm phần còn lại của không gian */
+    background-color: #d0e0f0; /* Màu nền cho vùng 2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,40 +1,208 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>reveal.js</title>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<style>
+		/* Thay đổi màu nền cho toàn bộ slide */
+		.reveal {
+			background-color: rgb(154, 154, 49);
+			/* Thay đổi mã màu theo ý bạn */
+			color: black;
+		}
+	</style>
+</head>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+<body>
+	<audio id="clock-music" src="/dist/mp3/tick_tock.wav" preload="auto"></audio>
+
+	<div class="reveal">
+		<div class="slides" id="slideContainer">
+			<!-- <section data-markdown>
+				<textarea>
+						King Brain Games 
+					</textarea>
+			</section> -->
+
+			<section id="main-slide" class="slide">
+				<h2>Choose a question please!</h2>
+				<div class="button-grid" id="choose-question-grid">
+				</div>
+				<div>
+					<a class="custom-button" href="#/rule-slide">Rule</a>
+					<a class="custom-button" href="#/about-team">MyTeam</a>
+				</div>
+			</section>
+
+			<section id="rule-slide" class="slide">
+
+			</section>
+
+			<section id="about-team" class="about-team slide">
+				<h2>MagoTeam</h2>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+
+		async function loadJSON() {
+			try {
+				response = await fetch('/dist/data_game.json');
+				const data = await response.json();
+				return data;
+			} catch (error) {
+				console.error('Lỗi khi đọc file JSON:', error);
+			}
+		}
+
+
+		async function main() {
+			const data = await loadJSON();
+			if (data) {
+				processData(data);
+			} else {
+				console.error('Không thể chạy các hàm khác vì dữ liệu không tải được.');
+			}
+		}
+
+		main();
+
+
+		Reveal.addEventListener('slidechanged', function (event) {
+			var currentSlide = event.currentSlide;
+			if (currentSlide.classList.contains('tick-tock-music')) {
+				const audio = document.getElementById("clock-music");
+				if (audio) {
+					audio.play();
+				}
+			}
+		});
+
+		function stopTickTock () {
+			const audio = document.getElementById("clock-music");
+				if (audio) {
+					audio.pause();
+					audio.currentTime = 0;
+				}
+		}
+
+		function processData(data) {
+			// Thêm các session slide cho từng câu hỏi
+			data.forEach((item, index) => {
+				var slideCOntainer = document.getElementById('slideContainer');
+				var mainSlide = document.getElementById('choose-question-grid');
+				var buttonMove = document.createElement('a');
+				buttonMove.setAttribute('href', `#/slide_question_${index}`);
+				buttonMove.classList.add('custom-button');
+				buttonMove.classList.add('question_button');
+				buttonMove.setAttribute('question-id', item.id);
+				buttonMove.textContent = index+1;
+				mainSlide.appendChild(buttonMove);
+
+				var sessionOneQuestion = document.createElement('section');
+				sessionOneQuestion.setAttribute('question_id', item.id);
+				sessionOneQuestion.setAttribute('id', `slide_question_${index}`);
+				sessionOneQuestion.classList.add('slide');
+				sessionOneQuestion.classList.add('tick-tock-music');
+				sessionOneQuestion.classList.add('slide_a_question');
+				var divForAnswer = document.createElement('div');
+				divForAnswer.setAttribute('data', item.answer);
+				divForAnswer.classList.add('region', 'region_answer');
+				var divForImage = document.createElement('div');
+				divForAnswer.classList.add('region', 'region_content');
+				var imgContentSrc = item.images[0];
+				var imgContentNode = document.createElement('img');
+				imgContentNode.setAttribute('src', imgContentSrc);
+				imgContentNode.classList.add('image-content');
+				divForImage.appendChild(imgContentNode);
+				var divForControl = document.createElement('div');
+				divForControl.classList.add('region', 'region_control');
+				var buttonBack = document.createElement('button');
+				buttonBack.textContent = 'Back';
+				buttonBack.addEventListener('click', function () {
+					stopTickTock();
+					window.location.href = '#/main-slide';
+				});
+				buttonBack.classList.add('custom-button');
+				var buttonShowAnswer = document.createElement('button');
+				buttonShowAnswer.classList.add('custom-button', 'show_answer_button');
+				buttonShowAnswer.textContent = 'ShowAnswer';
+				divForControl.appendChild(buttonBack);
+				divForControl.appendChild(buttonShowAnswer);
+				sessionOneQuestion.appendChild(divForAnswer);
+				sessionOneQuestion.appendChild(divForImage);
+				sessionOneQuestion.appendChild(divForControl);
+				slideCOntainer.appendChild(sessionOneQuestion);
 			});
-		</script>
-	</body>
+
+
+			// Hoàn thiện region_answer
+			document.querySelectorAll('.region_answer').forEach(function (regionAnswerItem) {
+				var regionAnswerData = regionAnswerItem.getAttribute('data');
+				regionAnswerData.split('').forEach(function (char) {
+					var button = document.createElement('button');
+					button.setAttribute('data', char);
+					button.classList.add('single_letter_answer');
+					regionAnswerItem.appendChild(button);
+					button.addEventListener('click', function (item) {
+						button.textContent = button.getAttribute('data');
+					});
+				});
+			});
+
+			// Hoàn thiện code các nút show_answer_button
+			document.querySelectorAll('.show_answer_button').forEach(function (button) {
+				button.addEventListener('click', function () {
+					stopTickTock();
+					var slideAncestor = button.closest('.slide_a_question');
+					var answerLetterButtons = slideAncestor.querySelectorAll('.single_letter_answer');
+					answerLetterButtons.forEach(function (item) {
+						item.textContent = item.getAttribute('data');
+					});
+				});
+			});
+
+
+			// Hoàn thiện nốt code các nút câu hỏi
+			document.querySelectorAll('.question_button').forEach(function (button) {
+				button.addEventListener('click', function (event) {
+					var slideAncestor = button.closest('.slide_a_question')
+					if (button.classList.contains('disabled')) {
+						console.log("disabled");
+						event.preventDefault();
+						return;
+					}
+					button.classList.add('disabled');
+					button.removeAttribute('onclick');
+					event.preventDefault();
+				});
+			});
+		}
+
+
+	</script>
+</body>
+
 </html>
