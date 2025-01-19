@@ -51,13 +51,13 @@
     },
     {
         "id": "011",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/natural-look.jpg",""],
+        "answer": "natural look"
     },
     {
         "id": "012",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/optimistic.png",""],
+        "answer": "optimistic"
     },
     {
         "id": "013",
@@ -71,13 +71,13 @@
     },
     {
         "id": "015",
-        "images": ["/dist/imgs/plush.png",""],
+        "images": ["/dist/imgs/rinse.png",""],
         "answer": "spot"
     },
     {
         "id": "016",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/rinse.webp",""],
+        "answer": "rinse"
     },
     {
         "id": "017",
@@ -86,23 +86,23 @@
     },
     {
         "id": "018",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/trudge.jpg",""],
+        "answer": "trudge"
     },
     {
         "id": "019",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/scorching.jpeg",""],
+        "answer": "scorching"
     },
     {
         "id": "020",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/dawn.png",""],
+        "answer": "dawn"
     },
     {
         "id": "021",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/instrument.jpg",""],
+        "answer": "instrument"
     },
     {
         "id": "022",
@@ -111,42 +111,37 @@
     },
     {
         "id": "023",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/workout.png",""],
+        "answer": "workout"
     },
     {
         "id": "024",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/give-up.jpg",""],
+        "answer": "give-up"
     },
     {
         "id": "025",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/countless.png",""],
+        "answer": "countless"
     },
     {
         "id": "026",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/lush.jpg",""],
+        "answer": "lush"
     },
     {
         "id": "027",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/funiture.jpg",""],
+        "answer": "funiture"
     },
     {
-        "id": "027",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "id": "030",
+        "images": ["/dist/imgs/spotless.jpg",""],
+        "answer": "spotless"
     },
     {
-        "id": "027",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
-    },
-    {
-        "id": "027",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "id": "031",
+        "images": ["/dist/imgs/overlook.jpg",""],
+        "answer": "overlook"
     }
 ]
