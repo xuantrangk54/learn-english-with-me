@@ -200,7 +200,7 @@
 				divForAnswer.classList.add('region', 'region_answer');
 				divForAnswer.classList.add('region', 'region_content');
 				divForAnswer.setAttribute('question_id', item.id);
-				var imgContentSrc = item.images[0];
+				var imgContentSrc = baseUrl + item.images[0];
 
 				var divForExample = document.createElement('div');
 				divForExample.setAttribute('data', item.example);
