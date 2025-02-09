@@ -68,16 +68,15 @@
 
 		Reveal.on('slidechanged', function (event) {
 			var currentSlide = event.currentSlide;
-			console.log (currentSlide.classList);
-			if (currentSlide.classList.contains('slide_a_question')) 
-			{
+			console.log(currentSlide.classList);
+			if (currentSlide.classList.contains('slide_a_question')) {
 				startImageReveal(currentSlide);
 			}
 			console.log(currentSlide);
 		});
 
-		
-		function startImageReveal (slideProcess) {
+
+		function startImageReveal(slideProcess) {
 			var numImageShowed = 0;
 			let questionId = slideProcess.getAttribute('question_id');
 			let idNodeImage = `image-container-item-${questionId}`;
@@ -85,43 +84,40 @@
 			let imgContentSrc = container.getAttribute('data');
 			container.innerHTML = '';
 			let parts = [];
-			let size = 100; 
-			for (let row=0; row<3; row++) {
-				for (let col=0; col<3; col++) {
-					let div = document.createElement ('div');
-					div.style.backgroundImage = `url('${imgContentSrc}')`;
-					div.classList.add ('image-part');
+			let size = 100;
+
+			for (let row = 0; row < 3; row++) {
+				for (let col = 0; col < 3; col++) {
+					let div = document.createElement('div');
+					div.style.backgroundColor = "green";
+					div.classList.add('image-part');
+					div.id = `part-image-${questionId}-${row}-${col}`;
 					div.style.backgroundPosition = `-${col * size}px -${row * size}px`;
-					parts.push (div);
+					div.addEventListener('click', function (event) {
+						console.log(event.target.id);
+						console.log('Expected ID:', `part-image-${questionId}-${row}-${col}`);
+						var imgUrl = event.target.parentElement.getAttribute('data');
+						event.target.style.backgroundImage = `url('${imgUrl}')` ;
+						event.target.style.opacity = 1;
+					});
+					parts.push(div);
 					container.appendChild(div);
 				}
 			}
-			let suffledParts = parts.sort(()=>Math.random()-0.5);
-			suffledParts.forEach((part, index)=>{
-				setTimeout(()=>{
-					part.style.opacity=1;
-					numImageShowed = numImageShowed+1;
-					console.log (numImageShowed);
-					if (numImageShowed==suffledParts.length){
-						stopTickTock();
-					}
-				}, index*2000);
-			});
-			
+
 		}
 
-		
 		Reveal.addEventListener('slidechanged', function (event) {
 			startTickTock();
 		});
 
-		function startTickTock () {
+		function startTickTock() {
 			var currentSlide = event.currentSlide;
 			if (currentSlide.classList.contains('tick-tock-music')) {
 				const audio = document.getElementById("clock-music");
 				if (audio) {
 					audio.play();
-					audio.addEventListener('ended', ()=>{
+					audio.addEventListener('ended', () => {
 						audio.currentTime = 0;
 						audio.play();
 					});
@@ -179,18 +175,24 @@
 				sessionOneQuestion.classList.add('slide');
 				sessionOneQuestion.classList.add('tick-tock-music');
 				sessionOneQuestion.classList.add('slide_a_question');
+
 				var divForAnswer = document.createElement('div');
 				divForAnswer.setAttribute('data', item.answer);
 				divForAnswer.classList.add('region', 'region_answer');
-
-				var divForImage = document.createElement('div');
 				divForAnswer.classList.add('region', 'region_content');
+				divForAnswer.setAttribute('question_id', item.id);
 				var imgContentSrc = item.images[0];
 
-				// var imgContentNode = document.createElement('img');
-				// imgContentNode.setAttribute('src', imgContentSrc);
-				// imgContentNode.classList.add('image-content');
-				// divForImage.appendChild(imgContentNode);
+				var divForExample = document.createElement('div');
+				divForExample.setAttribute('data', item.example);
+				divForExample.classList.add('region', 'region_example', 'region_content');
+				divForExample.setAttribute('question_id', item.id);
+				var pForExample = document.createElement('p');
+				pForExample.textContent = item.example;
+				divForExample.appendChild(pForExample);
+
+				var divForSuggest = document.createElement('div');
+				divForSuggest.classList.add('region-suggest');
 
 				var imgDivAutoSHhow = document.createElement('div');
 				imgDivAutoSHhow.id = 'image-container-item-' + item.id;
@@ -198,8 +200,7 @@
 				imgDivAutoSHhow.setAttribute('data', imgContentSrc);
 				imgDivAutoSHhow.setAttribute('isShowed', '0');
 				imgDivAutoSHhow.classList.add('image-container');
-				divForImage.appendChild(imgDivAutoSHhow);
-
+				divForSuggest.appendChild(imgDivAutoSHhow);
 
 				var divForControl = document.createElement('div');
 				divForControl.classList.add('region', 'region_control');
@@ -216,7 +217,8 @@
 				divForControl.appendChild(buttonBack);
 				divForControl.appendChild(buttonShowAnswer);
 				sessionOneQuestion.appendChild(divForAnswer);
-				sessionOneQuestion.appendChild(divForImage);
+				sessionOneQuestion.appendChild(divForExample);
+				sessionOneQuestion.appendChild(divForSuggest);
 				sessionOneQuestion.appendChild(divForControl);
 				slideCOntainer.appendChild(sessionOneQuestion);
 			});

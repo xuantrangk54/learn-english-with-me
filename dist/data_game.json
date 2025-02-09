@@ -2,136 +2,163 @@
     {
         "id": "001",
         "images": ["/dist/imgs/assistant.png",""],
-        "answer": "assistant"
+        "answer": "assistant",
+        "example":"The AI ... can automate many tasks in the office."
     },
     {
         "id": "002",
         "images": ["/dist/imgs/sociable.png",""],
-        "answer": "sociable"
+        "answer": "sociable",
+        "example": "She became more ... after joining the drama club."
     },
     {
         "id": "003",
         "images": ["/dist/imgs/national_park.png",""],
-        "answer": "national park"
+        "answer": "national park",
+        "example": "We visited a beautiful ... last summer and saw amazing wildlife."
     },
     {
         "id": "004",
         "images": ["/dist/imgs/rely.png",""],
-        "answer": "rely"
+        "answer": "rely",
+        "example": "I ... on my morning coffee to wake me up."
     },
     {
         "id": "005",
         "images": ["/dist/imgs/principal.png",""],
-        "answer": "principal"
+        "answer": "principal",
+        "example": "Our school’s ... is known for being strict but fair."
     },
     {
         "id": "006",
         "images": ["/dist/imgs/elegant.webp",""],
-        "answer": "elegant"
+        "answer": "elegant",
+        "example": "She wore an ... black dress to the gala."
     },
     {
         "id": "007",
         "images": ["/dist/imgs/amongst.png",""],
-        "answer": "amongst"
+        "answer": "amongst",
+        "example":"She felt comfortable ... her closest friends."
     },
     {
         "id": "008",
         "images": ["/dist/imgs/exhausting.jpg",""],
-        "answer": "exhausting"
+        "answer": "exhausting",
+        "example": "Running a marathon is an ... challenge."
     },
     {
         "id": "009",
         "images": ["/dist/imgs/single-story-house.webp",""],
-        "answer": "single-story house"
+        "answer": "single-story house",
+        "example": "A ... is a great option for people who prefer to avoid stairs."
     },
     {
         "id": "010",
         "images": ["/dist/imgs/spot.png",""],
-        "answer": "spot"
+        "answer": "spot",
+        "example":"We found a perfect ... for a picnic by the lake."
     },
     {
         "id": "011",
         "images": ["/dist/imgs/natural-look.jpg",""],
-        "answer": "natural look"
+        "answer": "natural look",
+        "example": "She prefers a ... with minimal makeup."
     },
     {
         "id": "012",
         "images": ["/dist/imgs/optimistic.png",""],
-        "answer": "optimistic"
+        "answer": "optimistic",
+        "example":"She remains ... about the future despite the challenges."
     },
     {
         "id": "014",
         "images": ["/dist/imgs/rush.png",""],
-        "answer": "rush"
+        "answer": "rush",
+        "example":"Don’t ... your work; take your time and do it properly."
     },
     {
         "id": "015",
         "images": ["/dist/imgs/rinse.webp",""],
-        "answer": "rinse"
+        "answer": "rinse",
+        "example":"Please ... the dishes before putting them in the dishwasher."
     },
     {
         "id": "017",
         "images": ["/dist/imgs/anxious.jpg",""],
-        "answer": "anxious"
+        "answer": "anxious",
+        "example":"She felt ... before her big job interview."
     },
     {
         "id": "018",
         "images": ["/dist/imgs/trudge.jpg",""],
-        "answer": "trudge"
+        "answer": "trudge",
+        "example":"He had to ... through the deep snow to reach his house."
     },
     {
         "id": "019",
         "images": ["/dist/imgs/scorching.jpeg",""],
-        "answer": "scorching"
+        "answer": "scorching",
+        "example": "The pavement was ... under the midday sun."
     },
     {
         "id": "020",
         "images": ["/dist/imgs/dawn.png",""],
-        "answer": "dawn"
+        "answer": "dawn",
+        "example":"We woke up early to watch the ... over the mountains."
     },
     {
         "id": "021",
         "images": ["/dist/imgs/instrument.jpg",""],
-        "answer": "instrument"
+        "answer": "instrument",
+        "example":"A guitar is a popular ... in many styles of music."
     },
     {
         "id": "022",
         "images": ["/dist/imgs/plush.webp",""],
-        "answer": "plush"
+        "answer": "plush",
+        "example": "She sank into the ... velvet sofa, enjoying its comfort."
     },
     {
         "id": "023",
         "images": ["/dist/imgs/workout.jpg",""],
-        "answer": "workout"
+        "answer": "workout",
+        "example":"Stretching before a ... helps prevent injuries."
     },
     {
         "id": "024",
         "images": ["/dist/imgs/give-up.jpg",""],
-        "answer": "give up"
+        "answer": "give up",
+        "example":"Don’t ... — you’re almost at the finish line!"
     },
     {
         "id": "025",
         "images": ["/dist/imgs/countless.jpg",""],
-        "answer": "countless"
+        "answer": "countless",
+        "example": "He received ... messages on his birthday."
     },
     {
         "id": "026",
         "images": ["/dist/imgs/lush.jpg",""],
-        "answer": "lush"
+        "answer": "lush",
+        "example":"The garden was filled with ... green trees and colorful flowers."
     },
     {
         "id": "027",
         "images": ["/dist/imgs/funiture.jpg",""],
-        "answer": "funiture"
+        "answer": "funiture",
+        "example":"She rearranged the ... to create more space."
     },
     {
         "id": "030",
         "images": ["/dist/imgs/spotless.jpg",""],
-        "answer": "spotless"
+        "answer": "spotless",
+        "example": "He takes pride in keeping his car ..."
     },
     {
         "id": "031",
         "images": ["/dist/imgs/overlook.jpg",""],
-        "answer": "overlook"
+        "answer": "overlook",
+        "example":"Sometimes we ... the small things that bring us happiness."
     }
 ]
