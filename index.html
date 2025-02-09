@@ -72,6 +72,11 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
 
+		Reveal.on('slidechanged', function (event) {
+			var currentSlide = event.currentSlide;
+			console.log(currentSlide);
+		});
+
 		async function loadJSON() {
 			try {
 				response = await fetch('/dist/data_game.json');
