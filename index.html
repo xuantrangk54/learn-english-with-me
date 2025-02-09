@@ -24,7 +24,7 @@
 <body>
 	
 
-	<audio id="clock-music" src="/dist/mp3/clock-tick-101150.mp3" preload="auto"></audio>
+	
 	<div class="reveal">
 		<div class="slides" id="slideContainer">
 
@@ -64,10 +64,18 @@
 	<script src="plugin/highlight/highlight.js"></script>
 	<script>
 
+
+	// <audio id="clock-music" src="/dist/mp3/clock-tick-101150.mp3" preload="auto"></audio>
+ 
 		const baseUrl = window.location.origin + window.location.pathname.split('#')[0];
 		var fullUrlAudio = baseUrl + "dist/mp3/clock-tick-101150.mp3";
-		const audio = document.getElementById("clock-music");
-		audio.setAttribute('src',fullUrlAudio);
+		var nodeAudio = document.createElement('audio');
+		nodeAudio.setAttribute('preload','auto');
+		nodeAudio.setAttribute('src', fullUrlAudio);
+		document.body.appendChild(nodeAudio);
+
+		// const audio = document.getElementById("clock-music");
+		// audio.setAttribute('src',fullUrlAudio);
 
 		Reveal.initialize({
 			hash: true,
