@@ -1,47 +1,5 @@
 [
     {
-        "answer": "energetic",
-        "images": ["/dist/imgs/energetic.webp"],
-        "meaning": [
-            
-        ],
-        "examples":[]
-    },
-    {
-        "answer": "across",
-        "images": [],
-        "meaning": [
-            "From one side to other side of something",
-            "On the other side of something"
-        ], 
-        "examples": [
-            "He walked across the field.",
-            "I drew a line across the page.",
-            "A grin spread across her face.",
-            "Where's the nearest bride across the river?",
-            "There is a bank right across the street."
-        ]
-    },
-    {
-        "answer": "beat",
-        "images": ["/dist/imgs/beat.jpg",""],
-        "meaning": [
-            "To strike repeatedly",
-            "To defeat",
-            "To surpass",
-            "To stir or mix",
-            "To avoid or escape"
-        ],
-        "examples": [
-            "The drummer beat the drum with enthusiasm.",
-            "The rain beat against the windows during the storm.",
-            "Our team beat the defending chapions in the finals.",
-            "No one could beat her in chess; she was unbeatable.",
-            "This recipe beats all others I've tried.",
-            "Nothing beats a hot cup of tea on a cold day."
-        ]
-    },
-    {
         "id": "001",
         "images": ["/dist/imgs/assistant.png",""],
         "answer": "assistant"
