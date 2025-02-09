@@ -127,7 +127,10 @@
 
 		async function loadJSON() {
 			try {
-				response = await fetch('/dist/data_game.json');
+				const baseUrl = window.location.origin + window.location.pathname.split('#')[0];
+				const fullUrl = baseUrl + "dist/data_game.json";
+				console.log (`read from: ${fullUrl}`);
+				response = await fetch(fullUrl);
 				const data = await response.json();
 				return data;
 			} catch (error) {
