@@ -26,11 +26,6 @@
 
 	<div class="reveal">
 		<div class="slides" id="slideContainer">
-			<!-- <section data-markdown>
-				<textarea>
-						King Brain Games 
-					</textarea>
-			</section> -->
 
 			<section id="main-slide" class="slide">
 				<h2>Choose a question please!</h2>
@@ -42,12 +37,22 @@
 				</div>
 			</section>
 
-			<section id="rule-slide" class="slide">
-
+			<section id="rule-slide" class="slide" style="text-align: left;">
+				<p>1. The fastest team will earn the right to answer.
+					Each team is allowed to answer only once for each question.
+				<p>
+				<p>2. The total points for each question are 9 points. The answer includes: <b>keyword</b>,
+					<b>meaning</b>, and <b>an example</b> for the word. The points will be shared equally among the
+					teams to complete the answer together.
+				<p>
+				<p>3. Incorrect answers will result in a 2-point deduction.</p>
+				<p>4. The game will end when we run out of questions or when time is up.</p>
+				<a href="#/main-slide" class="custom-button">Back</a>
 			</section>
 
 			<section id="about-team" class="about-team slide">
-				<h2>MagoTeam</h2>
+				<img src="dist/imgs/mango.png" />
+				<a href="#/main-slide" class="custom-button">Back</a>
 			</section>
 		</div>
 	</div>
@@ -100,12 +105,12 @@
 			}
 		});
 
-		function stopTickTock () {
+		function stopTickTock() {
 			const audio = document.getElementById("clock-music");
-				if (audio) {
-					audio.pause();
-					audio.currentTime = 0;
-				}
+			if (audio) {
+				audio.pause();
+				audio.currentTime = 0;
+			}
 		}
 
 		function processData(data) {
@@ -118,7 +123,7 @@
 				buttonMove.classList.add('custom-button');
 				buttonMove.classList.add('question_button');
 				buttonMove.setAttribute('question-id', item.id);
-				buttonMove.textContent = index+1;
+				buttonMove.textContent = index + 1;
 				mainSlide.appendChild(buttonMove);
 
 				var sessionOneQuestion = document.createElement('section');

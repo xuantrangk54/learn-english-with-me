@@ -1,5 +1,47 @@
 [
     {
+        "answer": "energetic",
+        "images": ["/dist/imgs/energetic.webp"],
+        "meaning": [
+            
+        ],
+        "examples":[]
+    },
+    {
+        "answer": "across",
+        "images": [],
+        "meaning": [
+            "From one side to other side of something",
+            "On the other side of something"
+        ], 
+        "examples": [
+            "He walked across the field.",
+            "I drew a line across the page.",
+            "A grin spread across her face.",
+            "Where's the nearest bride across the river?",
+            "There is a bank right across the street."
+        ]
+    },
+    {
+        "answer": "beat",
+        "images": ["/dist/imgs/beat.jpg",""],
+        "meaning": [
+            "To strike repeatedly",
+            "To defeat",
+            "To surpass",
+            "To stir or mix",
+            "To avoid or escape"
+        ],
+        "examples": [
+            "The drummer beat the drum with enthusiasm.",
+            "The rain beat against the windows during the storm.",
+            "Our team beat the defending chapions in the finals.",
+            "No one could beat her in chess; she was unbeatable.",
+            "This recipe beats all others I've tried.",
+            "Nothing beats a hot cup of tea on a cold day."
+        ]
+    },
+    {
         "id": "001",
         "images": ["/dist/imgs/assistant.png",""],
         "answer": "assistant"
@@ -60,29 +102,19 @@
         "answer": "optimistic"
     },
     {
-        "id": "013",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
-    },
-    {
         "id": "014",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/rush.png",""],
+        "answer": "rush"
     },
     {
         "id": "015",
-        "images": ["/dist/imgs/rinse.png",""],
-        "answer": "spot"
-    },
-    {
-        "id": "016",
         "images": ["/dist/imgs/rinse.webp",""],
         "answer": "rinse"
     },
     {
         "id": "017",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/anxious.jpg",""],
+        "answer": "anxious"
     },
     {
         "id": "018",
@@ -106,22 +138,22 @@
     },
     {
         "id": "022",
-        "images": ["/dist/imgs/plush.png",""],
-        "answer": "spot"
+        "images": ["/dist/imgs/plush.webp",""],
+        "answer": "plush"
     },
     {
         "id": "023",
-        "images": ["/dist/imgs/workout.png",""],
+        "images": ["/dist/imgs/workout.jpg",""],
         "answer": "workout"
     },
     {
         "id": "024",
         "images": ["/dist/imgs/give-up.jpg",""],
-        "answer": "give-up"
+        "answer": "give up"
     },
     {
         "id": "025",
-        "images": ["/dist/imgs/countless.png",""],
+        "images": ["/dist/imgs/countless.jpg",""],
         "answer": "countless"
     },
     {
