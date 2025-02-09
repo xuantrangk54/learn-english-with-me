@@ -72,7 +72,8 @@
 		var nodeAudio = document.createElement('audio');
 		nodeAudio.setAttribute('preload','auto');
 		nodeAudio.setAttribute('src', fullUrlAudio);
-		nodeAudio.id='clock-music';
+		nodeAudio.classList.add('clock-music');
+		nodeAudio.id = 'clock-music';
 		document.body.appendChild(nodeAudio);
 
 		// const audio = document.getElementById("clock-music");
