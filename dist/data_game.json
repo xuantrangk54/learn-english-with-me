@@ -55,7 +55,7 @@
     },
     {
         "id": "010",
-        "images": ["/dist/imgs/spot.png",""],
+        "images": ["/dist/imgs/spot_ver_1.png",""],
         "answer": "spot",
         "example":"We found a perfect ... for a picnic by the lake."
     },
@@ -67,7 +67,7 @@
     },
     {
         "id": "012",
-        "images": ["/dist/imgs/optimistic.png",""],
+        "images": ["/dist/imgs/optimism-810x502-1575360574577311472871.jpg",""],
         "answer": "optimistic",
         "example":"She remains ... about the future despite the challenges."
     },
